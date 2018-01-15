@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "homebridge-nest-cam": "^0.0.5",
+    "homebridge-platform-ring-video-doorbell": "^0.6.5",
+    "homebridge-smartthings": "^0.5.1"
+  }
+}

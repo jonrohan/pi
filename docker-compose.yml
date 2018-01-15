@@ -1,0 +1,18 @@
+version: "3"
+services:
+  homebridge:
+    image: oznu/homebridge:raspberry-pi
+    restart: always
+    network_mode: host
+    volumes:
+      - ./homebridge/config:/homebridge
+    environment:
+      - NEST_USR
+      - NEST_PWD
+      - RING_USR
+      - RING_PWD
+      - ST_APP_ID
+      - ST_TOKEN
+      - PGID=1000
+      - PUID=1000
+      - PACKAGES=libpcap-dev,ffmpeg

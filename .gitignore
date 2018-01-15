@@ -1,0 +1,7 @@
+node_modules
+
+# homebridge
+homebridge/config/**
+!homebridge/config/*.json
+!homebridge/config/yarn.lock
+!homebridge/config/startup.sh
