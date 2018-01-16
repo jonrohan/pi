@@ -1,0 +1,13 @@
+#!/bin/sh
+
+dir="$(pwd)"
+
+# Update passwords
+cd ../env
+git pull
+
+# Copy .env
+cp .env $dir
+cd $dir
+
+docker-compose up -d

@@ -1,0 +1,6 @@
+#!/bin/sh
+
+docker-compose down
+
+# Reset .env files
+git checkout .env homebridge/config/config.json
