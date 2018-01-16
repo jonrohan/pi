@@ -10,4 +10,9 @@ git pull
 cp .env $dir
 cd $dir
 
+export $(cat .env | xargs)
+
+# Replace config.json env
+perl -pi.bak -e 's/\$(\{)?([a-zA-Z_]\w*)(?(1)\})/$ENV{$2}/g' homebridge/config/config.json
+
 docker-compose up -d

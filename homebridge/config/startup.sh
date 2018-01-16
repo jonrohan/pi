@@ -18,8 +18,3 @@
 #
 # yarn add homebridge-hue
 #
-
-if grep -q '${' config.json; then
-  # Replace environment variables
-  cat config.json | perl -pe 's/\$(\{)?([a-zA-Z_]\w*)(?(1)\})/$ENV{$2}/g' | tee config.json
-fi
