@@ -1,0 +1,30 @@
+#!/bin/sh
+
+set -e
+
+repo_dir="$(pwd)/$1"
+
+# Get last successful sha on master from travis
+last_sha=$(curl -H "Travis-API-Version: 3" \
+     -H "Authorization: token $TRAVIS_TOKEN" \
+     https://api.travis-ci.org/repo/$TRAVIS_REPO/builds\?limit=1\&branch.name=master\&build.event_type=push\&build.state=passed \
+     | jq -r .builds[0].commit.sha)
+
+cd $repo_dir
+
+# Get master's sha
+head_sha=$(git rev-parse HEAD)
+
+echo ""
+echo "✅ Last successful travis build: $last_sha"
+echo "📚 Current HEAD:                 $head_sha"
+echo ""
+
+if [[ "$last_sha" == "$head_sha" ]]; then
+  echo "It's a match! No updates needed."
+else
+  echo "Updating server..."
+  $repo_dir/script/stop
+  git pull
+  $repo_dir/script/start
+fi
