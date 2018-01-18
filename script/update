@@ -2,7 +2,7 @@
 
 set -e
 
-repo_dir="$(pwd)/$1"
+repo_dir="$1"
 
 # Get last successful sha on master from travis
 last_sha=$(curl -H "Travis-API-Version: 3" \
