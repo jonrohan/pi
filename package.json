@@ -5,7 +5,6 @@
     "stop": "script/stop",
     "restart": "script/restart",
     "precommit": "npm run lint && $(npm bin)/ava tests/quick-test.js",
-    "prepush": "npm run lint && $(npm bin)/ava tests/quick-test.js",
     "lint": "$(npm bin)/eslint --ext .json --ext .js *.json homebridge/config/*.json tests/*",
     "test": "npm run lint && $(npm bin)/ava tests/*-test.js"
   },
