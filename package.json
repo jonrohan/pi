@@ -4,6 +4,8 @@
     "start": "script/start",
     "stop": "script/stop",
     "restart": "script/restart",
+    "precommit": "npm test",
+    "prepush": "npm test",
     "lint": "$(npm bin)/eslint --ext .json --ext .js *.json homebridge/config/*.json tests/*",
     "test": "npm run lint && $(npm bin)/ava tests/*-test.js"
   },
@@ -11,7 +13,8 @@
     "ava": "^0.24.0",
     "eslint": "^4.15.0",
     "eslint-plugin-github": "^0.22.0",
-    "eslint-plugin-json": "^1.2.0"
+    "eslint-plugin-json": "^1.2.0",
+    "husky": "^0.14.3"
   },
   "eslintConfig": {
     "plugins": [
