@@ -1,0 +1,28 @@
+{
+  "private": "true",
+  "scripts": {
+    "start": "script/start",
+    "stop": "script/stop",
+    "restart": "script/restart",
+    "precommit": "npm run lint && $(npm bin)/ava tests/quick-test.js",
+    "prepush": "npm run lint && $(npm bin)/ava tests/quick-test.js",
+    "lint": "$(npm bin)/eslint --ext .json --ext .js *.json homebridge/config/*.json tests/*",
+    "test": "npm run lint && $(npm bin)/ava tests/*-test.js"
+  },
+  "devDependencies": {
+    "ava": "^0.24.0",
+    "eslint": "^4.15.0",
+    "eslint-plugin-github": "^0.22.0",
+    "eslint-plugin-json": "^1.2.0",
+    "husky": "^0.14.3"
+  },
+  "eslintConfig": {
+    "plugins": [
+      "json"
+    ],
+    "extends": [
+      "plugin:github/es6",
+      "plugin:github/browser"
+    ]
+  }
+}
