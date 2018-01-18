@@ -1,9 +1,0 @@
-{
-  "plugins": [
-    "json"
-  ],
-  "extends": [
-    "plugin:github/es6",
-    "plugin:github/browser"
-  ]
-}
