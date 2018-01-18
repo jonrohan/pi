@@ -20,7 +20,7 @@ echo "✅ Last successful travis build: $last_sha"
 echo "📚 Current HEAD:                 $head_sha"
 echo ""
 
-if [[ "$last_sha" == "$head_sha" ]]; then
+if [ "$last_sha" == "$head_sha" ]; then
   echo "It's a match! No updates needed."
 else
   echo "Updating server..."
