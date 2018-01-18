@@ -3,6 +3,9 @@
   "name": "pi",
   "description": "",
   "scripts": {
+    "start": "script/start",
+    "stop": "script/stop",
+    "restart": "script/restart",
     "lint": "$(npm bin)/eslint --ext .json --ext .js *.json homebridge/config/*.json tests/*",
     "test": "npm run lint && $(npm bin)/ava tests/*-test.js"
   },
