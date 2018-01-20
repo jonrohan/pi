@@ -9,6 +9,10 @@
   "accessories": [],
   "platforms": [
     {
+      "platform": "BelkinWeMo",
+      "name": "WeMo Platform"
+    },
+    {
       "platform": "Nest-cam",
       "username": "${NEST_USR}",
       "password": "${NEST_PWD}",
