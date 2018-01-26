@@ -9,7 +9,7 @@
     "test": "npm run lint && $(npm bin)/ava tests/*-test.js"
   },
   "devDependencies": {
-    "ava": "^0.24.0",
+    "ava": "^0.25.0",
     "eslint": "^4.15.0",
     "eslint-plugin-github": "^0.22.0",
     "eslint-plugin-json": "^1.2.0",
