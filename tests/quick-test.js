@@ -11,7 +11,7 @@ test("Didn't check in any secrets.", t => {
   t.regex(dotenv, /PWD=1234/, "Looks like .env contains some secrets. 👮🏻‍♂️");
   t.regex(
     hbconfig,
-    /\${[A-Z]+_PWD}/,
+    /\${[A-Z]+_TOKEN}/,
     "Looks like homebridge/config/config.json contains some secrets. 👮🏻‍♂️"
   );
 });

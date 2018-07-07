@@ -9,22 +9,6 @@
   "accessories": [],
   "platforms": [
     {
-      "platform": "BelkinWeMo",
-      "name": "WeMo Platform"
-    },
-    {
-      "platform": "Nest-cam",
-      "username": "${NEST_USR}",
-      "password": "${NEST_PWD}",
-      "useOMX": true
-    },
-    {
-      "platform": "ring-video-doorbell",
-      "name": "Doorbell",
-      "username": "${RING_USR}",
-      "password": "${RING_PWD}"
-    },
-    {
       "platform": "SmartThings",
       "name": "SmartThings",
       "app_url": "https://graph.api.smartthings.com:443/api/smartapps/installations/",

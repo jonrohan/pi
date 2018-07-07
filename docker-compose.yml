@@ -7,10 +7,6 @@ services:
     volumes:
       - ./homebridge/config:/homebridge
     environment:
-      - NEST_USR
-      - NEST_PWD
-      - RING_USR
-      - RING_PWD
       - ST_APP_ID
       - ST_TOKEN
       - PGID=1000
